@@ -1,0 +1,10 @@
+Redux saga là một thư viện redux middleware , giúp quản lý những side effect trong redux đơn giản hơn , nằm giữa action và Provider ( nhận dữ liệu rồi effect qua Provider)
+
+Effect là một Javascript object chứa thông tin để saga middleware thực thi
+
+takeEvery() : cho phép chạy nhiều function trong một thời điểm , có thể dispatch new action mà ko cần biết action trước đó chạy xong hay chưa  
+takeLatest() : chỉ cho phép một function được chạy trong một thời điểm.  Khi action mới được dispatch thì action trước đó sẽ tự động bị cancel 
+takeLeading() : chỉ cho phép một function được chạy trong một thời điểm. Khi dispatch action ở lần đầu tiên , những action tiếp theo sẽ bị cancel cho đến khi action đầu tiên được hoàn thành 
+take() :nó chỉ đợi đúng một lần duy nhất
+put() :Khi muốn dispatch một action trong redux store, thay vì phải truyền vào redux store hoặc là dispatch action đến saga, bạn có thể dùng luôn put 
+call() ;
